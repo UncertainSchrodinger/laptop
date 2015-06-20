@@ -219,7 +219,7 @@ mkdir -p ~/development/{work,personal}
 
 if [ ! -d "$HOME/development/personal/dotfiles" ]; then
   fancy_echo "Fetching dotfiles"
-  git clone https://github.com/UncertainSchrodinger/laptop.git ~/development/personal/dotfiles
+  git clone https://github.com/UncertainSchrodinger/dotfiles.git ~/development/personal/dotfiles
 fi
 
 if [ -f "$HOME/.laptop.local" ]; then
