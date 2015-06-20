@@ -215,7 +215,7 @@ if ! command -v rcup >/dev/null; then
 fi
 
 fancy_echo "Configuring development directories"
-  mkdir -p ~/development/{work, personal}
+mkdir -p ~/development/{work,personal}
 
 if [ ! -d "$HOME/development/personal/dotfiles" ]; then
   fancy_echo "Fetching dotfiles"
