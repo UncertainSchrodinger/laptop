@@ -156,6 +156,8 @@ brew update
 
 brew_install_or_upgrade 'zsh'
 brew_install_or_upgrade 'git'
+brew_install_or_upgrade 'mercurial'
+
 brew_install_or_upgrade 'the_silver_searcher'
 brew_install_or_upgrade 'vim'
 brew_install_or_upgrade 'ctags'
@@ -214,7 +216,7 @@ if ! command -v rcup >/dev/null; then
 fi
 
 fancy_echo "Configuring development directories"
-mkdir -p ~/development/{work,personal}
+mkdir -p ~/development/{work,personal,golang}
 
 if [ ! -d "$HOME/.dotfiles" ]; then
   fancy_echo "Fetching dotfiles"
