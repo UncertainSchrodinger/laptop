@@ -205,6 +205,8 @@ rbenv shell "$ruby_version"
 gem update --system
 
 gem_install_or_update 'bundler'
+gem_install_or_update 'tmuxinator'
+gem_install_or_update 'cocoapods'
 
 fancy_echo "Configuring Bundler ..."
   number_of_cores=$(sysctl -n hw.ncpu)
@@ -220,7 +222,7 @@ mkdir -p ~/development/{work,personal,golang}
 
 if [ ! -d "$HOME/.dotfiles" ]; then
   fancy_echo "Fetching dotfiles"
-  git clone https://github.com/UncertainSchrodinger/dotfiles.git $HOME/.dotfiles
+  git clone https://github.com/UncertainSchrodinger/dotfiles.git $HOME/dotfiles
 else
   fancy_echo "Updated dotfiles"
   cd $HOME/.dotfiles && git pull
