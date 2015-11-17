@@ -166,7 +166,6 @@ brew_install_or_upgrade 'reattach-to-user-namespace'
 brew_install_or_upgrade 'imagemagick'
 brew_install_or_upgrade 'node'
 
-
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 
@@ -209,8 +208,6 @@ rbenv shell "$ruby_version"
 gem update --system
 
 gem_install_or_update 'bundler'
-gem_install_or_update 'tmuxinator'
-gem_install_or_update 'cocoapods'
 
 fancy_echo "Configuring Bundler ..."
   number_of_cores=$(sysctl -n hw.ncpu)
@@ -220,6 +217,9 @@ if ! command -v rcup >/dev/null; then
   brew_tap 'thoughtbot/formulae'
   brew_install_or_upgrade 'rcm'
 fi
+
+gem_install_or_update 'tmuxinator'
+gem_install_or_update 'cocoapods'
 
 fancy_echo "Configuring development directories"
 mkdir -p ~/development/{work,personal,golang}
