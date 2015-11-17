@@ -166,11 +166,13 @@ brew_install_or_upgrade 'reattach-to-user-namespace'
 brew_install_or_upgrade 'imagemagick'
 brew_install_or_upgrade 'node'
 
+
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 
 brew_install_or_upgrade 'go'
 brew_install_or_upgrade 'rust'
+brew_install_or_upgrade 'elixir'
 
 brew_install_or_upgrade 'docker'
 brew_install_or_upgrade 'boot2docker'
@@ -183,6 +185,8 @@ brew_cask_install 'sketch'
 brew_cask_install 'spotify'
 brew_cask_install 'skype'
 brew_cask_install 'google-chrome'
+brew_cask_install 'virtualbox'
+brew_cask_install 'vagrant'
 
 # shellcheck disable=SC2016
 append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
